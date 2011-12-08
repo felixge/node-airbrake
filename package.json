@@ -13,8 +13,8 @@
     "node": "*"
   },
   "dependencies": {
-    "request": "1.9.8",
-    "xmlbuilder": "0.1.5",
+    "request": "2.2.9",
+    "xmlbuilder": "0.3.1",
     "stack-trace": "0.0.5",
     "hashish": "0.0.4"
   },
