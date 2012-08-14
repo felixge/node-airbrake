@@ -64,6 +64,7 @@ This screenshot shows an airbrake error send from this module:
 * Optional auto-handler for `uncaughtException` events
 * Provides notification url linking to airbrake in `notify()` callback
 * Timeout airbrake requests after 30 seconds, you never know
+* Respect `http_proxy` (or `https_proxy` if `airbrake.protocol` is https) environment variable
 
 [long-stack-traces]: https://github.com/tlrobinson/long-stack-traces
 
@@ -221,6 +222,11 @@ options:
 * `user:` The user doing the deployment, defaults to `process.env.USER`.
 * `repo:` The github url of this repository. Defaults to `''`.
 * `rev:` The revision of this deployment. Defaults to `''`.
+
+## Proxy support
+
+If the environment variable `http_proxy` (or `https_proxy` if `airbrake.protocol` is
+https) is set, a proxy will be used for posting to the airbrake host.
 
 ## Alternative modules
 
