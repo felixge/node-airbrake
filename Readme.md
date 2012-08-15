@@ -201,6 +201,11 @@ Registers a `process.on('uncaughtException')` listener. When an uncaught
 exception occurs, the error is send to airbrake, and then re-thrown to
 kill the process.
 
+### airbrake.dieOnError = true
+
+If set to false, continue after reporting an uncaught exception.
+The default behavior is to exit with status code 1.
+
 ### airbrake.notify(err, [cb])
 
 Sends the given `err` to airbrake.
