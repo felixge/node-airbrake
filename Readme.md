@@ -206,6 +206,14 @@ kill the process.
 If set to false, continue after reporting an uncaught exception.
 The default behavior is to exit with status code 1.
 
+Be *very careful* with this.  Whatever was going on when the exception was
+thrown is likely to have leaked resources, left handles locked, and generally
+caused havoc.
+
+See also
+[Dealing with uncaught exceptions](http://debuggable.com/posts/node-js-dealing-with-uncaught-exceptions:4c933d54-1428-443c-928d-4e1ecbdd56cb)
+for a lucid explanation of why this is a bad idea.
+
 ### airbrake.notify(err, [cb])
 
 Sends the given `err` to airbrake.
