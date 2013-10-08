@@ -1,9 +1,8 @@
 # airbrake
 
-Node.js client for [airbrakeapp.com][], formerly known as [hoptoadapp.com][].
+Node.js client for [airbrakeapp.com][].
 
-[airbrakeapp.com]: http://airbrakeapp.com/
-[hoptoadapp.com]: http://robots.thoughtbot.com/post/7665411707/hoptoad-is-now-airbrake
+[airbrakeapp.com]: http://airbrakeapp.com
 
 ## Install
 
@@ -44,10 +43,10 @@ A custom error handler will need to be set for Express:
 
 ``` javascript
 var airbrake = require('airbrake').createClient("your api key");
-app.error(airbrake.expressHandler())
+app.use(airbrake.expressHandler())
 ```
 
-This has been verified with Express 2.X
+This has been verified with Express 3.X
 
 ## Screenshot
 
