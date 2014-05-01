@@ -1,5 +1,7 @@
 # airbrake
 
+<img src="http://f.cl.ly/items/1t0F40132D243k1D0d0g/nodejs.jpg" width=800px>
+
 Node.js client for [airbrakeapp.com][], formerly known as [hoptoadapp.com][].
 
 [airbrakeapp.com]: http://airbrakeapp.com/
