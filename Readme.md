@@ -25,6 +25,11 @@ throw new Error('I am an uncaught exception');
 
 Please note that the above will re-throw the exception after it has been
 successfully delivered to airbrake, caushing your process to exit with status 1.
+This can optionally be disabled by passing false to `handleExceptions`:
+
+``` javascript
+airbrake.handleExceptions(false);
+```
 
 If you want more control over the delivery of your errors, you can also
 manually submit errors to airbrake.
