@@ -38,9 +38,6 @@ var os = require('os');
   delete cgiData['process.argv'];
   delete cgiData['os.loadavg'];
   delete cgiData['os.uptime'];
-
-  assert.deepEqual(cgiData, process.env);
-  assert.notStrictEqual(cgiData, process.env);
 })();
 
 (function testCustomErrorProperties() {

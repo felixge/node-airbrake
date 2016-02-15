@@ -2,6 +2,8 @@
 
 ### master
 
+### [v0.3.9][v0.3.9] (February 15, 2016)
+
 * start sending user agent info from Express handler ([#79][79])
 * make error handler's killing of process customizable ([#45][45])
 * return a Buffer object from `notifyXML` to fix Errbit incompatibility ([#51][51])
@@ -30,3 +32,4 @@
 [71]:https://github.com/airbrake/node-airbrake/pull/71
 [72]:https://github.com/airbrake/node-airbrake/pull/72
 [73]:https://github.com/airbrake/node-airbrake/pull/73
+[v0.3.9]: https://github.com/airbrake/node-airbrake/releases/tag/v0.3.9
