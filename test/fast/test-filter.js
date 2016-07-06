@@ -8,7 +8,7 @@ var Airbrake = require(common.dir.root);
   var airbrake = Airbrake.createClient(null, common.key, 'dev');
   sinon.stub(airbrake, '_sendRequest');
 
-  airbrake.addFilter(function(err) {
+  airbrake.addFilter(function (err) {
     if (err.errors[0].message === 'this should not be posted to airbrake') {
       return null;
     }
