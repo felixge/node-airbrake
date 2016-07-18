@@ -97,12 +97,12 @@ The return value of the filter function determines whether or not the error noti
 
 An error notice must pass all provided filters to be submitted.
 
-In the following example all errors triggered by admins will be ignored:
+In the following example errors triggered with a message of 'this should not be posted to airbrake' will be ignored:
 
 ```js
 airbrake.addFilter(function(notice) {
-  if (notice.sessions.admin) {
-    // Ignore errors from admin sessions.
+  if (notice.errors[0].message === 'this should not be posted to airbrake') {
+    // Ignore errors with this messsage
     return null;
   }
   return notice;
